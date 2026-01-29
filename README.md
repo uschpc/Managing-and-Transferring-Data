@@ -59,3 +59,46 @@ rsync -rltvh ~/Documents/my_data/ <username>@discovery.usc.edu:/project2/<pi_id>
 # -t: preserve modification times
 # -v: verbose (show progress)
 # -h: human-readable file sizes
+
+### C. GUI Clients (SFTP)
+* Use standalone applications like **CyberDuck** or **FileZilla**.
+* Connect using hostnames: `hpc-transfer1.usc.edu` or `discovery.usc.edu`.
+
+### D. Globus & Rclone
+* **Globus:** Ideal for fast transfers between different HPC centers or sharing with external collaborators.
+* **Rclone:** Used to link cloud storage (Google Drive, OneDrive) to CARC; involves a more technical initial setup.
+
+---
+
+## 4. File Permissions & Ownership
+Managing access is critical for collaboration and quota management.
+
+### Permission Values
+Permissions are calculated by summing numeric values:
+* **4:** Read (`r`)
+* **2:** Write (`w`)
+* **1:** Execute (`x`)
+
+### Essential Commands
+* **Change Permissions (`chmod`):**
+    ```bash
+    chmod 640 file.txt       # User: rw, Group: r, Others: none 
+    chmod +x script.sh       # Add execute permission 
+    chmod -R g-w directory   # Recursively remove group write access 
+    ```
+* **Change Group Ownership (`chgrp`):**
+    Quota is tracked via group ownership. Use this to ensure collaborators can access project files.
+    ```bash
+    chgrp ttroj_412 data.txt
+    chgrp -R ttroj_412 /project/ttroj_412/group_data [cite: 7]
+    ```
+
+---
+
+## 5. Data Integrity (Checksums)
+To verify that files were not corrupted during transfer, use the `md5sum` utility to compare file "fingerprints".
+
+### Single File Verification
+```bash
+md5sum <filename> 
+# Example output: a71f703ed688eeca637dc27df714e854  data.zip 
