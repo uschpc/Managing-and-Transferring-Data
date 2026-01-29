@@ -22,7 +22,7 @@ Storage is partitioned based on performance needs, backup requirements, and coll
 | Directory Type | Path Schema | Quota (Default) | Backup Policy | Best For... |
 | :--- | :--- | :--- | :--- | :--- |
 | **Home** | `/home1/<user>` | 100 GB / 255k files | Snapshots (2 weeks) | Scripts, configuration files, small tools. |
-| **Project** | `/project2/<pi_id>` | 10 TB free per PI | **Fully Backed Up** | Shared group data and active research files. |
+| **Project** | `/project2/<pi_id>` | 10 TB free per PI | Snapshots | Shared group data and active research files. |
 | **Scratch** | `/scratch1/<user>` | 10 TB (temporary) | **NO BACKUP** | Large temp files and high-speed job I/O. |
 
 ### Storage Costs & Expansion
