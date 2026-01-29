@@ -1,6 +1,6 @@
 # Managing and Transferring Data at CARC
 
-This guide provides a comprehensive overview of managing, transferring, and securing research data at the University of Southern California's Center for Advanced Research Computing (CARC).
+This guide provides a comprehensive overview of managing, transferring research data at the University of Southern California's Center for Advanced Research Computing (CARC).
 
 ---
 
