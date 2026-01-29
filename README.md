@@ -28,7 +28,7 @@ Storage is partitioned based on performance needs, backup requirements, and coll
 ### Storage Costs & Expansion
 * **Free Tier:** 15 TB of project per PI is provided at no cost.
 * **Expansion:** Additional storage can be purchased in 5 TB increments at $60/TB/year.
-* **Cold Storage:** For long-term archiving of inactive data, use the `arcput` command. This is an unlimited (for now) archive space for files >10MB.
+* **Cold Storage:** For long-term archiving of inactive data, use the `arcput` command. 
 
 ---
 
