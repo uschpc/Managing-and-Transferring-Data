@@ -97,9 +97,35 @@ Permissions are calculated by summing numeric values:
 ---
 
 ## 5. Data Integrity (Checksums)
-To verify that files were not corrupted during transfer, use the `md5sum` utility to compare file "fingerprints".
 
-### Single File Verification
+This guide outlines how to ensure file integrity after a transfer using SHA-256 checksums. Verifying your files ensures that no data was corrupted, lost, or altered during the move.
+
+---
+
+## 🚀 Quick Start by Operating System
+
+The command used to generate hashes varies depending on your environment:
+
+* **Linux:** `sha256sum`
+* **macOS:** `shasum -a 256`
+* **Windows (PowerShell):** `Get-FileHash`
+
+---
+
+## 🛠 Step-by-Step Verification Process
+
+Using Linux/Unix as the standard example, follow these steps to verify your transfer:
+
+### 1. Generate Checksums at Source
+Navigate to the directory containing your original files and run:
 ```bash
-md5sum <filename> 
-# Example output: a71f703ed688eeca637dc27df714e854  data.zip 
+find . -type f -exec sha256sum '{}' \; > sha256sum.txt
+
+```
+
+This will generate the file sha256sum.txt. Copy this file to the destination directory where files were transferred, and then from that directory enter:
+
+```
+sha256sum -c sha256sum.txt
+```
+This compares the file checksums from the source with the file checksums in the destination and prints the results. The transfer was successful if all of the checksums match, as indicated by an OK status. Note that the sha256sum.txt file itself will fail because it was not originally present in the source directory.
