@@ -22,11 +22,11 @@ Storage is partitioned based on performance needs, backup requirements, and coll
 | Directory Type | Path Schema | Quota (Default) | Backup Policy | Best For... |
 | :--- | :--- | :--- | :--- | :--- |
 | **Home** | `/home1/<user>` | 100 GB / 255k files | Snapshots (2 weeks) | Scripts, configuration files, small tools. |
-| **Project** | `/project2/<pi_id>` | 10 TB free per PI | Snapshots | Shared group data and active research files. |
+| **Project** | `/project2/<pi_id>` | 15 TB free per PI | Snapshots (2 weeks) | Shared group data and active research files. |
 | **Scratch** | `/scratch1/<user>` | 10 TB (temporary) | **NO BACKUP** | Large temp files and high-speed job I/O. |
 
 ### Storage Costs & Expansion
-* **Free Tier:** 10 TB per PI is provided at no cost.
+* **Free Tier:** 15 TB of project per PI is provided at no cost.
 * **Expansion:** Additional storage can be purchased in 5 TB increments at $60/TB/year.
 * **Cold Storage:** For long-term archiving of inactive data, use the `arcput` command. This is an unlimited (for now) archive space for files >10MB.
 
