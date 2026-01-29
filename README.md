@@ -59,6 +59,7 @@ rsync -rltvh ~/Documents/my_data/ <username>@discovery.usc.edu:/project2/<pi_id>
 # -t: preserve modification times
 # -v: verbose (show progress)
 # -h: human-readable file sizes
+```
 
 ### C. GUI Clients (SFTP)
 * Use standalone applications like **CyberDuck** or **FileZilla**.
