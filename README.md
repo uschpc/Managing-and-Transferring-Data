@@ -102,8 +102,6 @@ This guide outlines how to ensure file integrity after a transfer using SHA-256 
 
 ---
 
-## 🚀 Quick Start by Operating System
-
 The command used to generate hashes varies depending on your environment:
 
 * **Linux:** `sha256sum`
@@ -112,7 +110,6 @@ The command used to generate hashes varies depending on your environment:
 
 ---
 
-## 🛠 Step-by-Step Verification Process
 
 Using Linux/Unix as the standard example, follow these steps to verify your transfer:
 
