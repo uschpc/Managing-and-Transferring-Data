@@ -91,7 +91,7 @@ Permissions are calculated by summing numeric values:
     Quota is tracked via group ownership. Use this to ensure collaborators can access project files.
     ```bash
     chgrp ttroj_412 data.txt
-    chgrp -R ttroj_412 /project/ttroj_412/group_data [cite: 7]
+    chgrp -R ttroj_412 /project/ttroj_412/group_data 
     ```
 
 ---
